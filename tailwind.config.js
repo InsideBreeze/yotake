@@ -7,7 +7,14 @@ module.exports = {
   ],
   darkMode: ["class"],
   theme: {
-    extend: {},
+    extend: {
+			colors: {
+				'link_light': '#00441a',
+				'link_dark': '#b1c5c8',
+				'link_light_hover': '',
+				'link_dark_hover': ''
+			}
+		},
   },
   plugins: [require("@tailwindcss/typography")],
 }
