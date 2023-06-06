@@ -56,7 +56,7 @@ const items = [
 			}
 		]
 	}
-	]
+]
 export default function Links() {
 	return (
 		<div>
@@ -67,11 +67,11 @@ export default function Links() {
 						<ul className='ml-4 '>
 							{
 								item.links.map(link => (
-								<li key={link.name} className='before:content-["🍀"] before:mr-1 before:text-sm'>
-										<Link href={link.href} className='text-link_light dark:text-link_dark text-sm hover:underline'>
-										{link.name}
+									<li key={link.name} className='before:content-["🍀"] before:mr-2 before:text-sm'>
+										<Link href={link.href} className='text-sm'>
+											{link.name}
 										</Link>
-								</li>
+									</li>
 								))
 							}
 						</ul>

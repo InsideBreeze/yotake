@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+    background-color: var(--bg-color);
+}
+html.light {
+    --bg-color: theme('colors.zinc.50');
+    --link-color: theme('colors.cyan.950');
+    --link-hover-color: theme('colors.violet.950');
+}
+
+html.dark {
+    --bg-color: theme('colors.zinc.950');
+    --link-color: theme('colors.cyan.50');
+    --link-hover-color: theme('colors.indigo.200');
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline
+}
