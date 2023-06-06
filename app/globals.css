@@ -19,9 +19,27 @@ html.dark {
 
 a {
     color: var(--link-color);
+    position: relative;
 }
 
 a:hover {
     color: var(--link-hover-color);
-    text-decoration: underline
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0.1em;
+    left: 0;
+    width: 0px;
+    height: 1.1px;
+    background-color: var(--link-hover-color);
+    transition: width 350ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform-origin: left;
+}
+
+a:hover::after {
+    width: 100%;
+    transition: width 350ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }

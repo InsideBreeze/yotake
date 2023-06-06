@@ -39,7 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`antialiased min-h-screen text-slate-900 dark:text-slate-50 ${roboto.className}`}
+        className={`antialiased min-h-screen  text-slate-900 dark:text-slate-50 ${roboto.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-3xl mx-auto py-4 px-4">
@@ -53,14 +53,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
 							{
 								links.map(link => (
 									<Link key={link.name} href={link.ref}>
-										{link.name}
+    										{link.name}
 									</Link>
 								))
 							}
 						</nav>
             <main>{children}</main>
           </div>
-          <Analytics />
         </ThemeProvider>
       </body>
     </html>

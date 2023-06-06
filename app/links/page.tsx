@@ -68,7 +68,10 @@ export default function Links() {
 							{
 								item.links.map(link => (
 									<li key={link.name} className='before:content-["🍀"] before:mr-2 before:text-sm'>
-										<Link href={link.href} className='text-sm'>
+										<Link href={link.href}
+											  className='relative text-sm inline-block
+												   '
+										>
 											{link.name}
 										</Link>
 									</li>
